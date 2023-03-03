@@ -8,6 +8,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+const mongoose = require('mongoose')
+mongoose.set('strictQuery', false)
+const mongoDB = "mongodb+srv://calebmatthewbush:mangothesmasher@cluster0.hutomf5.mongodb.net/video_rental?retryWrites=true&w=majority"
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
