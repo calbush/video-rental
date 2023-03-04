@@ -1,3 +1,4 @@
+require('dotenv').config()
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -10,7 +11,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
-const mongoDB = "mongodb+srv://calebmatthewbush:mangothesmasher@cluster0.hutomf5.mongodb.net/video_rental?retryWrites=true&w=majority"
+const mongoDB = process.env.SECRET_MONGO_PASS
 
 main().catch(err => console.log(err))
 async function main() {
