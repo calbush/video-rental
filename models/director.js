@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const DirectorSchema = new Schema({
     first_name: { type: String, required: true, maxLength: 100 },
     last_name: { type: String, required: true, maxLength: 100 },
+    country: { type: String, required: true}
 })
 
 DirectorSchema.virtual('name').get(function (){

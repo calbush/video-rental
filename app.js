@@ -12,6 +12,10 @@ const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
 const mongoDB = "mongodb+srv://calebmatthewbush:mangothesmasher@cluster0.hutomf5.mongodb.net/video_rental?retryWrites=true&w=majority"
 
+main().catch(err => console.log(err))
+async function main() {
+  await mongoose.connect(mongoDB)
+}
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
